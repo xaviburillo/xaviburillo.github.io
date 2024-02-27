@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --white: rgb(200, 215, 240);
+    --white-secondary: rgba(200, 215, 240, 0.4);
+    --white-opacity: rgba(200, 215, 240, 0.75);
+    --dark-blue: rgb(15, 23, 42);
+    --dark-blue-opacity: rgba(42, 45, 61, 0.2);
+    --celeste: rgb(99, 223, 202);
+    --celeste-opacity: rgb(151, 254, 237, 0.1); 
+}
+
+body {
+    background-color: var(--dark-blue) !important;
+    color: var(--white-opacity) !important;
+    background-image: url('/imgs/wave.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+header, footer {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+section:not(#sobre-mi) {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+section h3.section-title {
+    font-family: "Open Sans", sans-serif;
+    color: var(--white);
+}
+
+.content a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    transition: .5s;
+}
+
+.content a:hover {
+    color: var(--celeste);
+    transition: .5s;
+}
+
+.nav a {
+    font-size: 0.9rem;
+}
+
+.nav #logo-social {
+    display: inline-block;
+    width: 24px;
+    vertical-align: -.125em;
+}
+
+.titulo, footer {
+    color: var(--white);
+}
+
+h1.titulo {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.subtitulo {
+    color: var(--white-secondary);
+}
+
+section {
+    scroll-margin-top: 6rem;
+}
+
+section:not(#sobre-mi), footer {
+    font-size: 0.9em;
+}
+
+.section-item {
+    padding: 20px;
+    border-top: solid 1px transparent;
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.section-item:hover {
+    border-top: solid 1px var(--celeste-opacity);
+    border-radius: 15px;
+    background-color: var(--dark-blue-opacity);
+    transition: .2s;
+}
+
+.section-item:hover .titulo {
+    color: var(--celeste);
+    transition: .2s;
+}
+
+.fecha {
+    font-family: "Rajdhani", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--white-secondary);
+}
+
+#experiencia li {
+    margin-bottom: 10px;
+}
+
+.tech-list .badge {
+    background-color: var(--celeste-opacity);
+    color: var(--celeste);
+    font-size: 0.85em;
+}
+
+.logo {
+    width: 32px;
+}
+
+.nav .nav-link {
+    border-color: var(--celeste-opacity) !important;
+}
+
+ul.nav {
+    max-width: fit-content;
+}
+
+ul {
+    list-style: none;
+}
+
+.bi-arrow-up-right {
+    font-size: .85rem;
+    transition: .2s;
+}
+
+.link-element:hover .bi-arrow-up-right {
+    transform: translate(3px, -2px);
+    transition: .2s;
+}
+
+.link-element p {
+    color: var(--white-opacity);
+    font-weight: initial;
+}
+
+.mb-6 {
+    margin-bottom: 6rem !important;
+}
+
+.content header {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 3rem;
+}
+
+@media (min-width: 992px) {
+    
+    header {
+        height: 100vh;
+    }
+
+    .content main {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        padding-right: 3rem;
+    }
+}
