@@ -1,0 +1,110 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    background-image: url("../imgs/fondo3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#infoScreen {
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    min-width: 345px;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0, 75%);
+    border-radius: 15px;
+}
+
+#infoScreen .botonInfoScreen {
+    cursor: pointer;
+    background-color: red;
+    transition: 0.3s;
+}
+
+#infoScreen .botonInfoScreen:hover {
+    background-color: #d50000;
+    transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+    #infoScreen {
+        top: 40%;
+    }
+}
+
+.startIcon {
+    width: 25px;
+}
+
+.startIcon.corazon {
+    top: 10px;
+    left: 10px;
+}
+
+.startIcon.pica {
+    top: 10px;
+    right: 10px;
+}
+
+.startIcon.trebol {
+    bottom: 10px;
+    left: 10px;
+}
+
+.startIcon.diamante {
+    bottom: 10px;
+    right: 10px;
+}
+
+.carta {
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.carta.on {
+    transform: rotateY(180deg);
+}
+
+.carta.off {
+    transform: rotateY(0deg);
+}
+
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, red, orange , yellow, green, skyblue, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 1s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

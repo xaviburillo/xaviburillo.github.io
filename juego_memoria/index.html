@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="preload" as="image" href="imgs/0.png">
+	<link rel="preload" as="image" href="imgs/1.png">
+	<link rel="preload" as="image" href="imgs/2.png">
+	<link rel="preload" as="image" href="imgs/3.png">
+	<link rel="preload" as="image" href="imgs/detras.png">
+    
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico">
+	<title>Xavi Burillo - Juego de memoria</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row position-absolute" id="infoScreen">
+            <div id="startScreen" class="p-5 w-auto position-relative text-white">
+                <div class="row mb-3">
+                    <div class="col d-flex justify-content-center">
+                        <h1>Juego de memoria</h1>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <p>Debes encontrar todas las parejas girando las cartas que se encuentran boca abajo.</p>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <h2>Reglas:</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li>Si fallas al intentar adivinar una pareja, se te restará un intento.</li>
+                                    <li>Si intentas emparejar una carta con si misma, se te restará un intento.</li>
+                                    <li>Perderás si se agota el tiempo o los intentos.</li>
+                                    <li>Ganarás si consigues encontrar todas las parejas del tablero.</li>
+                                    <li>Tu puntuación será más alta cuanto más rápido completes el juego.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-6">
+                        <button class="btn btn-primary botonInfoScreen w-100 text-black fw-semibold border border-black roundered" onclick="iniciarJuego()">JUGAR</button>
+                    </div>
+                </div>
+                <img src="imgs/icons/heart.png" class="startIcon corazon position-absolute">
+                <img src="imgs/icons/spade.png" class="startIcon pica position-absolute">
+                <img src="imgs/icons/club.png" class="startIcon trebol position-absolute">
+                <img src="imgs/icons/diamond.png" class="startIcon diamante position-absolute">
+            </div>
+            <div id="endingScreen" class="p-5 w-auto position-relative bg-dark text-white rounded-4" hidden>
+                <div class="row mb-3">
+                    <div class="col d-flex justify-content-center">
+                        <h1 id="resultado"></h1>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col d-flex justify-content-center">
+                        <h2 id="resultadoPerdido" class="subtitulo"></h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col d-flex justify-content-center">
+                        <h2>Tu puntuación: <span id="puntuacion" class="rainbow_text_animated"></span></h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <h2>Leaderboard:</h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <p id="leaderboard"></p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-6">
+                        <button class="btn btn-primary botonInfoScreen w-100 text-black fw-semibold border border-black roundered" onclick="iniciarJuego()">VOLVER A JUGAR</button>
+                    </div>
+                </div>
+                <img src="imgs/icons/heart.png" class="startIcon corazon position-absolute">
+                <img src="imgs/icons/spade.png" class="startIcon pica position-absolute">
+                <img src="imgs/icons/club.png" class="startIcon trebol position-absolute">
+                <img src="imgs/icons/diamond.png" class="startIcon diamante position-absolute">
+            </div>
+        </div>
+    </div>
+    <div class="vh-100">
+        <div class="row h-50 d-flex justify-content-center align-items-center" id="divCartas">
+        
+        </div>
+    </div>
+    <div id="infoJuego" class="position-sticky bottom-0 end-50 p-3 bg-light">
+        <div class="container">
+            <div class="row d-flex justify-content-center gap-5">
+                <div class="col-auto">
+                    <h4 class="m-0">TIEMPO: <span id="tiempo"></span></h4>
+                </div>
+                <div class="col-auto">
+                    <h4 class="m-0">INTENTOS: <span id="intentos"></span></h4>
+                </div>
+            </div>
+		</div>
+    </div>
+</body>
+</html>
