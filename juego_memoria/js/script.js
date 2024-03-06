@@ -134,7 +134,7 @@ function printaJuego() {
     let j = 0;
     for (let i = 0; i < arrayCartas.length; i++) {
         if (i%2==0) {
-            arrayCartas[i] = "<div class='col-1 carta-container'>"
+            arrayCartas[i] = "<div class='col-3 col-sm-1 carta-container'>"
                                 +"<div class='carta off' id='a" + j + "' onclick='compara(a" + j + ")'>"
                                     +"<div class='front'>"
                                         +"<img class='img-fluid' src='imgs/" + j + ".png'>"
@@ -145,7 +145,7 @@ function printaJuego() {
                                 +"</div>"
                             +"</div>";
         } else {
-            arrayCartas[i] = "<div class='col-1 carta-container'>"
+            arrayCartas[i] = "<div class='col-3 col-sm-1 carta-container'>"
                                 +"<div class='carta off' id='b" + j + "' onclick='compara(b" + j + ")'>"
                                     +"<div class='front'>"
                                         +"<img class='img-fluid' src='imgs/" + j + ".png'>"
