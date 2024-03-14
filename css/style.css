@@ -103,6 +103,7 @@ section:not(#sobre-mi), footer {
 .fecha {
     font-weight: 500;
     color: var(--white-secondary);
+    font-size: 0.8em;
 }
 
 #experiencia li {
