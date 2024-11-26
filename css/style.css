@@ -106,7 +106,7 @@ section:not(#sobre-mi), footer {
     font-size: 0.8em;
 }
 
-#experiencia li {
+#experiencia li, #proyectos li {
     margin-bottom: 10px;
 }
 
